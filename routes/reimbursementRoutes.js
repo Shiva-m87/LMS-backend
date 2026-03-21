@@ -8,6 +8,6 @@ router.route('/')
     .get(protect, getReimbursements);
 
 router.route('/:id/status')
-    .put(protect, authorize('Manager', 'Admin'), updateReimbursementStatus);
+    .put(protect, authorize('Admin'), updateReimbursementStatus);
 
 module.exports = router;
